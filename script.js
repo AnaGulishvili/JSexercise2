@@ -96,7 +96,25 @@ array6.forEach((item) => {
 
  //for ციკლის საშუალებით მიიღეთ reverse ვერისია, ანუ 5,4,3,2,1
 
- let array7 = [1,2,3,4,5];
+ let array7 = [1, 2, 3, 4, 5];
+ let reversedArray7 = [];
+
+ for(let i= array7.length-1; i>=0; i--) {
+    reversedArray7[reversedArray7.length] = array7[i];
+    }
+
+    console.log(reversedArray7);
+
+    //ფუნქციის საშუალებით გამოთვალეთ უსერის ასაკი და დაამატეთ შემდეგი პირობა, თუ გადაცემული ასაკი მეტია 18- ზე დააბრუნეთ - სრულლოვანი, თუ ნაკელებია  დააბრუნეთ არასწულწლოვანი. 
+//ეს ამოცანა დაწერეთ arrow function-ით და if ის პირობა ჩაწერეთ ახალი სინტაქსით;
+
+let userAge = (birthYear, yearNow) => {
+        let age = yearNow - birthYear;
+        let ageResult = age > 18?'სრულწლოვანი' :'არასრულწლოვანი';
+        return ageResult;
+     };
+ let result8 = userAge(1995, 2023);
+ console.log(result8);
 
 
 
